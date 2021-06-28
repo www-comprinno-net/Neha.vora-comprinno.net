@@ -1,0 +1,19 @@
+#we take intergers as input in for loop
+for i in range(int(input())):
+
+#sorting is done to form a string and cheaked in another string ,if not we append
+    o = sorted([c for c in input()])
+    c = []
+    d = dict(Counter(o))
+    for e in d.values():
+        c.append(e)
+    c.sort()
+    
+    # we use here if/else to see the get a desierd output in dynamic/not dynamic
+    if len(c)<3:
+        print("Dynamic")
+    else:
+        if c[-1] != c[-2]+c[-3]:
+            print("Not")
+        else:
+            print("Dynamic")
